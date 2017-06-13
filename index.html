@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Batalla Star Wars</title>
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="images/pelota.png" />
+	<link href="ProyectStyle.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
+	<script type="text/javascript" src="js/tablaEquipos.js"></script>
+	<script type="text/javascript" src="js/tablaEquiposJson.js"></script>
+	<script type="text/javascript" src="js/chart.js"></script>	
+	<script type="text/javascript" src="js/Geo.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+</head>
+<header id="encabezado">	
+	<h1 id="title">Batalla Star Wars</h1>
+	<button id="integrantes"></button>
+
+	
+</header>
+<body>
+	<aside id="pLeft">
+		 <button id="jugar">JUGAR</button>
+		 <canvas id="cancha"></canvas>	 
+		 <audio id="bong" src="bong.wav">
+		 
+	</aside>
+	<aside id="pRight">
+		<div id="geo">
+		</div>
+		<div id="chart_div1">
+		<input id="lineChart" class="buttonChart" type="button" value="Line Chart"/>
+		<input id="pieChart" class="buttonChart" type="button" value="Pie Chart"/>
+		<input id="columnChart" class="buttonChart" type="button" value="Column Chart"/>
+		</div>
+		<div id="chart_div"> </div>
+	</aside>
+	<div id="pCenter" >
+		<table id="tableEquipos">
+			<thead id="tableHead"></thead>
+
+			<tbody id="tableBody"></tbody>
+		</table> 
+	</div >
+	
+
+</body>
+<center>
+	<footer>	
+	
+		<img id="jedi" class="equiposPrimeraDiv" src="images/jedi.png" alt="CAR">
+		<img id="vs" class="equiposPrimeraDiv" src="images/vs.png" alt="vs">
+		<img id="sith" class="equiposPrimeraDiv" src="images/sith.png" alt="SAP">
+		
+	</footer>
+</center>
+
+
+<p id="derechos">-------------Proyecto-Investigación de Operaciones-------------<br>CopyRight © 2017  All Rights Reserved.</p>

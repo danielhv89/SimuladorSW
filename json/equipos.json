@@ -1,0 +1,68 @@
+{
+  "results":
+	{
+	 "title":"TABLA STAR WARS",
+	 "teams":[
+	 
+	 {
+	  "name": "Darth Vader",
+	  "Fuerza": 5,
+	  "Resistencia": 5,
+	  "Velocidad": 2,
+	  "Inteligencia": 3,
+	  "DañoAtaque1": 25,
+	  "DañoAtaque2": 40,
+	  "DañoAtaque3": 50,
+	  "ResistenciaDefensa1": 15,
+	  "ResistenciaDefensa2": 40,
+	  "ResistenciaDefensa3": 80,
+	  "DañoCritico1": 100,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.40, 
+	  		"Ataque2": 0.60,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.30,
+	  		"Critico1": 0.10,
+	  		"Critico2": 0.90
+
+	  	}
+	 },
+	 {
+	  "name": "Yoda",
+	  "Fuerza": 5,
+	  "Resistencia": 5,
+	  "Velocidad": 2,
+	  "Inteligencia": 3,
+	  "DañoAtaque1": 25,
+	  "DañoAtaque2": 40,
+	  "DañoAtaque3": 50,
+	  "ResistenciaDefensa1": 15,
+	  "ResistenciaDefensa2": 40,
+	  "ResistenciaDefensa3": 80,
+	  "DañoCritico1": 100,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.40, 
+	  		"Ataque2": 0.60,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.30,
+	  		"Critico1": 0.10,
+	  		"Critico2": 0.90
+	  	}	  
+	 }
+	 
+	]}
+}
+ 
+ 
