@@ -104,6 +104,39 @@
 	var imagePlayer1 = new Image(); //
 	imagePlayer1.width="35";
 	imagePlayer1.height="35";
+
+	var imagePlayer2 = new Image(); //
+	imagePlayer2.width="35";
+	imagePlayer2.height="35";
+
+	var imagePlayer3 = new Image(); //
+	imagePlayer3.width="35";
+	imagePlayer3.height="35";
+
+	var imagePlayer4 = new Image(); //
+	imagePlayer4.width="35";
+	imagePlayer4.height="35";
+
+	var imagePlayer5 = new Image(); //
+	imagePlayer5.width="35";
+	imagePlayer5.height="35";
+
+	var imagePlayer6 = new Image(); //
+	imagePlayer6.width="35";
+	imagePlayer6.height="35";
+
+	var imagePlayer7 = new Image(); //
+	imagePlayer7.width="35";
+	imagePlayer7.height="35";
+
+	var imagePlayer8 = new Image(); //
+	imagePlayer8.width="35";
+	imagePlayer8.height="35";
+
+	var imagePlayer9 = new Image(); //
+	imagePlayer9.width="35";
+	imagePlayer9.height="35";
+
 	
 	// Handle image loading
 	imageBall.onload = function() {
@@ -116,6 +149,16 @@
 	// Load images 
 	imagePlayer.src = "player.png";
 	imagePlayer1.src = "player1.png";
+	imagePlayer2.src = "player2.png";
+	imagePlayer3.src = "player3.png";
+	imagePlayer4.src = "player4.png";
+	imagePlayer5.src = "player5.png";
+	imagePlayer6.src = "player6.png";
+	imagePlayer7.src = "player7.png";
+	imagePlayer8.src = "player8.png";
+	imagePlayer9.src = "player9.png";
+
+
 
 	function drawFrame() {
 	  // Clear canvas.
@@ -158,15 +201,62 @@
 		  else ball.dy =  1+VY;
 		}
 		// (Re)draw the ball.
-		if(i>1){
+		if(i==0){
+			ctx.drawImage(imagePlayer, ball.x, ball.y);
 		}else if(i==1){
 			ctx.drawImage(imagePlayer1, ball.x, ball.y); 
+			
+		}else if(i==2){
+			ctx.drawImage(imagePlayer2, ball.x, ball.y); 
 			ctx.beginPath();
 			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
 			ctx.lineWidth = 1;
 			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
 			ctx.fill();
-		}else{
+		}else if(i==3){
+			ctx.drawImage(imagePlayer4, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}else if(i==4){
+			ctx.drawImage(imagePlayer5, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}else if(i==5){
+			ctx.drawImage(imagePlayer6, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}else if(i==6){
+			ctx.drawImage(imagePlayer7, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}else if(i==7){
+			ctx.drawImage(imagePlayer8, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}else if(i==8){
+			ctx.drawImage(imagePlayer2, ball.x, ball.y); 
+			ctx.beginPath();
+			ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2); // partir de donde pinte el arco
+			ctx.lineWidth = 1;
+			ctx.fillStyle = ball.fillColor(); // color con el q llena la figura pr hay q llamar al fill
+			ctx.fill();
+		}
+		else{
 			ctx.drawImage(imagePlayer, ball.x, ball.y); 
 		}
 	  };

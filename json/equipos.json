@@ -1,9 +1,206 @@
-{
+﻿{
   "results":
 	{
 	 "title":"TABLA STAR WARS",
 	 "teams":[
 	 
+	 
+	 {
+	  "name": "Yoda",
+	  "Fuerza": 5,
+	  "Resistencia": 5,
+	  "Velocidad": 2,
+	  "Inteligencia": 3,
+	  "DañoAtaque1": 25,
+	  "DañoAtaque2": 40,
+	  "DañoAtaque3": 50,
+	  "ResistenciaDefensa1": 15,
+	  "ResistenciaDefensa2": 40,
+	  "ResistenciaDefensa3": 80,
+	  "DañoCritico1": 100,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.40, 
+	  		"Ataque2": 0.60,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.30,
+	  		"Critico1": 0.10,
+	  		"Critico2": 0.90
+	  	}	  
+	 },
+	 {
+	  "name": "Mace Windu",
+	  "Fuerza": 5,
+	  "Resistencia": 5,
+	  "Velocidad": 4,
+	  "Inteligencia": 4,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 30,
+	  "DañoAtaque3": 40,
+	  "ResistenciaDefensa1": 5,
+	  "ResistenciaDefensa2": 15,
+	  "ResistenciaDefensa3": 25,
+	  "DañoCritico1": 60,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.80, 
+	  		"Ataque2": 0.20,
+	  		"TipoAtaque1": 0.45,
+	  		"TipoAtaque2": 0.45,
+	  		"TipoAtaque3": 0.10,
+	  		"Defensa1": 0.30,
+	  		"Defensa2": 0.50,
+	  		"Defensa3": 0.20,
+	  		"Critico1": 0.20,
+	  		"Critico2": 0.80
+	  	}	  
+	 },
+	 {
+	  "name": "Luke",
+	  "Fuerza": 5,
+	  "Resistencia": 5,
+	  "Velocidad": 5,
+	  "Inteligencia": 2,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 30,
+	  "DañoAtaque3": 40,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 20,
+	  "ResistenciaDefensa3": 100,
+	  "DañoCritico1": 100,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.70, 
+	  		"Ataque2": 0.30,
+	  		"TipoAtaque1": 0.60,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.10,
+	  		"Defensa1": 0.50,
+	  		"Defensa2": 0.35,
+	  		"Defensa3": 0.15,
+	  		"Critico1": 0.10,
+	  		"Critico2": 0.90
+	  	}	  
+	 },
+	 {
+	  "name": "Obi-Wan Kenobi",
+	  "Fuerza": 4,
+	  "Resistencia": 5,
+	  "Velocidad": 3,
+	  "Inteligencia": 4,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 15,
+	  "DañoAtaque3": 15,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 20,
+	  "ResistenciaDefensa3": 10,
+	  "DañoCritico1": 0,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.90, 
+	  		"Ataque2": 0.10,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.20,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.50,
+	  		"Critico1": 0.15,
+	  		"Critico2": 0.85
+	  	}	  
+	 },
+	 {
+	  "name": "Qui-Gon-Jinn",
+	  "Fuerza": 4,
+	  "Resistencia": 3,
+	  "Velocidad": 3,
+	  "Inteligencia": 5,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 15,
+	  "DañoAtaque3": 25,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 20,
+	  "ResistenciaDefensa3": 50,
+	  "DañoCritico1": 0,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.85, 
+	  		"Ataque2": 0.15,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.50,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.20,
+	  		"Critico1": 0.15,
+	  		"Critico2": 0.85
+	  	}	  
+	 },
+	 {
+	  "name": "Palpatine",
+	  "Fuerza": 5,
+	  "Resistencia": 2,
+	  "Velocidad": 4,
+	  "Inteligencia": 5,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 25,
+	  "DañoAtaque3": 35,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 90,
+	  "ResistenciaDefensa3": 100,
+	  "DañoCritico1": 70,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.85, 
+	  		"Ataque2": 0.15,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.30,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.30,
+	  		"Critico1": 0.30,
+	  		"Critico2": 0.70
+	  	}	  
+	 },
+	 {
+	  "name": "Dooku",
+	  "Fuerza": 4,
+	  "Resistencia": 3,
+	  "Velocidad": 4,
+	  "Inteligencia": 4,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 25,
+	  "DañoAtaque3": 30,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 15,
+	  "ResistenciaDefensa3": 100,
+	  "DañoCritico1": 0,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.80, 
+	  		"Ataque2": 0.20,
+	  		"TipoAtaque1": 0.50,
+	  		"TipoAtaque2": 0.30,
+	  		"TipoAtaque3": 0.20,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.30,
+	  		"Defensa3": 0.30,
+	  		"Critico1": 0.20,
+	  		"Critico2": 0.80
+	  	}	  
+	 },
 	 {
 	  "name": "Darth Vader",
 	  "Fuerza": 5,
@@ -34,31 +231,59 @@
 	  	}
 	 },
 	 {
-	  "name": "Yoda",
+	  "name": "Darth Maul",
 	  "Fuerza": 5,
-	  "Resistencia": 5,
-	  "Velocidad": 2,
-	  "Inteligencia": 3,
-	  "DañoAtaque1": 25,
-	  "DañoAtaque2": 40,
-	  "DañoAtaque3": 50,
-	  "ResistenciaDefensa1": 15,
-	  "ResistenciaDefensa2": 40,
-	  "ResistenciaDefensa3": 80,
+	  "Resistencia": 3,
+	  "Velocidad": 5,
+	  "Inteligencia": 2,
+	  "DañoAtaque1": 15,
+	  "DañoAtaque2": 15,
+	  "DañoAtaque3": 30,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 15,
+	  "ResistenciaDefensa3": 100,
+	  "DañoCritico1": 0,
+	  "DañoCritico2": 0,
+	  "PB":
+	  	{
+	  		"Ataque1": 0.60, 
+	  		"Ataque2": 0.40,
+	  		"TipoAtaque1": 0.40,
+	  		"TipoAtaque2": 0.40,
+	  		"TipoAtaque3": 0.20,
+	  		"Defensa1": 0.40,
+	  		"Defensa2": 0.40,
+	  		"Defensa3": 0.20,
+	  		"Critico1": 0.10,
+	  		"Critico2": 0.90
+	  	}	  
+	 },
+	 {
+	  "name": "Darth Plagueis",
+	  "Fuerza": 5,
+	  "Resistencia": 4,
+	  "Velocidad": 3,
+	  "Inteligencia": 4,
+	  "DañoAtaque1": 10,
+	  "DañoAtaque2": 25,
+	  "DañoAtaque3": 70,
+	  "ResistenciaDefensa1": 0,
+	  "ResistenciaDefensa2": 30,
+	  "ResistenciaDefensa3": 100,
 	  "DañoCritico1": 100,
 	  "DañoCritico2": 0,
 	  "PB":
 	  	{
-	  		"Ataque1": 0.40, 
-	  		"Ataque2": 0.60,
-	  		"TipoAtaque1": 0.40,
-	  		"TipoAtaque2": 0.30,
-	  		"TipoAtaque3": 0.30,
-	  		"Defensa1": 0.40,
-	  		"Defensa2": 0.30,
-	  		"Defensa3": 0.30,
-	  		"Critico1": 0.10,
-	  		"Critico2": 0.90
+	  		"Ataque1": 0.90, 
+	  		"Ataque2": 0.10,
+	  		"TipoAtaque1": 0.50,
+	  		"TipoAtaque2": 0.40,
+	  		"TipoAtaque3": 0.10,
+	  		"Defensa1": 0.70,
+	  		"Defensa2": 0.20,
+	  		"Defensa3": 0.10,
+	  		"Critico1": 0.20,
+	  		"Critico2": 0.80
 	  	}	  
 	 }
 	 
