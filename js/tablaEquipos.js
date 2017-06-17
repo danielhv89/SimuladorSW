@@ -114,8 +114,8 @@
 			// do something here
 	};
 	// Load images 
-	imagePlayer.src = "player.png";
-	imagePlayer1.src = "player1.png";
+	imagePlayer.src = "images/player.png";
+	imagePlayer1.src = "images/player1.png";
 
 	function drawFrame() {
 	  // Clear canvas.
@@ -317,109 +317,200 @@ function Jugar(){
 	eventosEquipoB.TipoAtaque2, eventosEquipoB.TipoAtaque3, eventosEquipoB.Defensa1, eventosEquipoB.Defensa2,
 	eventosEquipoB.Defensa3, eventosEquipoB.Critico];
 
-	var diferenciaDeProbabilidades = 20;
 	var vidaEquipoA = 100;
 	var vidaEquipoB = 100;
-
-	var n = 0;
 
 	//Elegimos un numero al azar para ver quien ataca primero; 
 	var azarEquipo1 = Math.random();
 	var azarEquipo2 = Math.random();
 
-	for (var tiempo = 0; tiempo < 4; tiempo++) { // 60 tiempos
+// if (azarEquipo1 > azarEquipo2){
+	// alert (equipo1 +"\n"+ "ataca primero");
+	for (var tiempo = 0; tiempo < 2; tiempo++) { // 60 tiempos 60/4=15
+		if(vidaEquipoA > 0 && vidaEquipoB > 0){
+		
+			
+//////////////// ATACA EQUIPO 1 ///////////////////
+				if(atributosEquipoA.Inteligencia + atributosEquipoA.Velocidad 
+					> atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad){
+					var numerodeAtaque = Math.floor((Math.random() * 3) + 1);
+					
 
-		if (azarEquipo1 > azarEquipo2){
-			alert (equipo1 +"\n"+ "ataca primero");
-			if(tiempo == n){
-				//hay un ataque
-				// si la suma de fuerza + inteligencia de equipo1 es > a suma de fuerza + inteligencia equipo2, equipo1 acerta el ataque
-				if(atributosEquipoA.Inteligencia + atributosEquipoA.Velocidad > 
-				(atributosEquipoA.Inteligencia + atributosEquipoA.Velocidad)-Math.floor((Math.random() * 10) + 1)){
-					alert (equipo1 +"\n"+ "acerto ataque");
-					vidaEquipoB = vidaEquipoB - atributosEquipoA.DañoAtaque1;
+					switch (numerodeAtaque) {
+    					case 1:
+        					vidaEquipoB = vidaEquipoB - atributosEquipoA.DañoAtaque1;
+        					alert (equipo1 +"\n"+ "Atacó con ataque 1");
+        					break;
+    					case 2:
+  					      	vidaEquipoB = vidaEquipoB - atributosEquipoA.DañoAtaque2;
+  					      	alert (equipo1 +"\n"+ "Atacó con ataque 2");
+        				  	break;
+    					case 3:
+        					vidaEquipoB = vidaEquipoB - atributosEquipoA.DañoAtaque3;
+        					alert (equipo1 +"\n"+ "Atacó con ataque 3");
+                         }
 	
 				}else{
-					alert (equipo1 +"\n"+ "no acerto el ataque");
+					alert (equipo1 +"\n"+ "No acertó el ataque");
 				}
 
-				n++;
-			}
-				//hay defensa
-				if(tiempo == (n+1)){
+				alert ("Vida" +" "+equipo1+" "+vidaEquipoA + "\n"+ "Vida"+" "+equipo2+" "+vidaEquipoB);	
+				//FALTA GOLPE CRITICO
+				if (vidaEquipoA <=0){
+						vidaEquipoA=0;
+						break;}
+				    if (vidaEquipoB <=0){
+				    	vidaEquipoB=0;
+				    	break;}
+
+//////////////// DEFENSA EQUIPO 2 ///////////////////
+					//resistencia, inteligencia y velocidad
+
 					alert (equipo2 +"\n"+ "se defendio");
-					if(atributosEquipoB.DañoAtaque1-atributosEquipoB.ResistenciaDefensa1 > 0){
-					vidaEquipoB = vidaEquipoB - (atributosEquipoA.DañoAtaque1-atributosEquipoA.ResistenciaDefensa1);} 
-					n++;
-				}
-					else
-						//hay ataque
-						if (tiempo == (n+2)){
-							//hay un ataque
-							// si la suma de fuerza + inteligencia de equipo1 es > a suma de fuerza + inteligencia equipo2, equipo1 acerta el ataque
-							if(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad > 
-							(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad)-Math.floor((Math.random() * 10) + 1)){
-								alert (equipo2 +"\n"+ "acerto ataque");
-								vidaEquipoA = vidaEquipoA - atributosEquipoA.DañoAtaque1;	
-						}else{
-							alert (equipo2 +"\n"+ "no acerto el ataque");
-						}
-							n++;
-						}
+					if(atributosEquipoB.Resistencia+atributosEquipoB.Velocidad+atributosEquipoB.Inteligencia > 
+						atributosEquipoA.Resistencia+atributosEquipoA.Velocidad+atributosEquipoA.Inteligencia){
 
-		}
-		else{
-			alert (equipo2 +"\n"+ "ataca primero");
-			if(tiempo == n){
-				//hay un ataque
-				// si la suma de fuerza + inteligencia de equipo1 es > a suma de fuerza + inteligencia equipo2, equipo1 acerta el ataque
-				if(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad > 
-				(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad)-Math.floor((Math.random() * 10) + 1)){
+					var numerodeRecistencia = Math.floor((Math.random() * 3) + 1);
+					
+
+					switch (numerodeRecistencia) {
+    					case 1:
+        					vidaEquipoB = vidaEquipoB - (atributosEquipoA.DañoAtaque1-atributosEquipoB.ResistenciaDefensa1);
+        					alert (equipo2 +"\n"+ "se defendio con defensa tipo 1");
+        					break;
+    					case 2:
+  					      	vidaEquipoB = vidaEquipoB - (atributosEquipoA.DañoAtaque2-atributosEquipoB.ResistenciaDefensa2);
+  					      	alert (equipo2 +"\n"+ "se defendio con defensa tipo 2");
+        				  	break;
+    					case 3:
+        					vidaEquipoB = vidaEquipoB - (atributosEquipoA.DañoAtaque3-atributosEquipoB.ResistenciaDefensa3);
+        					alert (equipo2 +"\n"+ "se defendio con defensa tipo 3");
+                         }
+					} 
+					else 
+						{vidaEquipoB = vidaEquipoB - atributosEquipoA.DañoAtaque1;}
+
+					alert ("Vida" +" "+equipo1+" "+vidaEquipoA + "\n"+ "Vida"+" "+equipo2+" "+vidaEquipoB);
+
+					if (vidaEquipoA <=0){
+						vidaEquipoA=0;
+						break;}
+				    if (vidaEquipoB <=0){
+				    	vidaEquipoB=0;
+				    	break;}
+
+
+				
+//////////////// ATAQUE EQUIPO 2 ///////////////////
+				if(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad > atributosEquipoA.Inteligencia + atributosEquipoA.Velocidad){
 					alert (equipo2 +"\n"+ "acerto ataque");
-					vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque1;
+					var numerodeAtaque = Math.floor((Math.random() * 3) + 1);
+					
+
+					switch (numerodeAtaque) {
+    					case 1:
+        					vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque1;
+        					alert (equipo2 +"\n"+ "Atacó con ataque 1");
+        					break;
+    					case 2:
+  					      	vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque2;
+  					      	alert (equipo2 +"\n"+ "Atacó con ataque 2");
+        				  	break;
+    					case 3:
+        					vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque3;
+        					alert (equipo2 +"\n"+ "Atacó con ataque 3");
+                         }
 	
 				}else{
 					alert (equipo2 +"\n"+ "no acerto el ataque");
 				}
 
-				n++;
-			}
-				//hay defensa
-				if(tiempo == (n+1)){
-					alert (equipo1 +"\n"+ "se defendio");
-					if(atributosEquipoA.DañoAtaque1-atributosEquipoA.ResistenciaDefensa1 > 0){
-					vidaEquipoB = vidaEquipoB - (atributosEquipoA.DañoAtaque1-atributosEquipoA.ResistenciaDefensa1);} 
-					n++;
-				}
-					else
-						//hay ataque
-						if (tiempo == (n+2)){
-							//hay un ataque
-							// si la suma de fuerza + inteligencia de equipo1 es > a suma de fuerza + inteligencia equipo2, equipo1 acerta el ataque
-							if(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad > 
-							(atributosEquipoB.Inteligencia + atributosEquipoB.Velocidad)-Math.floor((Math.random() * 10) + 1)){
-								alert (equipo2 +"\n"+ "acerto ataque");
-								vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque1;	
-						}else{
-							alert (equipo2 +"\n"+ "no acerto el ataque");
-						}
-							n++;
-						}
+				alert ("Vida" +" "+equipo1+" "+vidaEquipoA + "\n"+ "Vida"+" "+equipo2+" "+vidaEquipoB);
+				//FALTA GOLPE CRITICO	
+				if (vidaEquipoA <=0){
+						vidaEquipoA=0;
+						break;}
+				    if (vidaEquipoB <=0){
+				    	vidaEquipoB=0;
+				    	break;}		
 
-		}
-    	
+//////////////// DEFENSA EQUIPO 1 ///////////////////
+
+					alert (equipo1 +"\n"+ "se defendio");
+					if(atributosEquipoA.Resistencia+atributosEquipoA.Velocidad+atributosEquipoA.Inteligencia > 
+						atributosEquipoB.Resistencia+atributosEquipoB.Velocidad+atributosEquipoB.Inteligencia){
+
+						var numerodeRecistencia = Math.floor((Math.random() * 3) + 1);
+					
+
+					switch (numerodeRecistencia) {
+    					case 1:
+        					vidaEquipoA = vidaEquipoA - (atributosEquipoB.DañoAtaque1-atributosEquipoA.ResistenciaDefensa1);
+        					alert (equipo1 +"\n"+ "se defendio con defensa tipo 1");
+        					break;
+    					case 2:
+  					      	vidaEquipoA = vidaEquipoA - (atributosEquipoB.DañoAtaque2-atributosEquipoA.ResistenciaDefensa2);
+  					      	alert (equipo1 +"\n"+ "se defendio con defensa tipo 2");
+        				  	break;
+    					case 3:
+        					vidaEquipoA = vidaEquipoA - (atributosEquipoB.DañoAtaque3-atributosEquipoA.ResistenciaDefensa3);
+        					alert (equipo1 +"\n"+ "se defendio con defensa tipo 3");
+                         }
+					
+			} 
+					else 
+						{vidaEquipoA = vidaEquipoA - atributosEquipoB.DañoAtaque1;}
+
+					alert ("Vida" +" "+equipo1+" "+vidaEquipoA + "\n"+ "Vida"+" "+equipo2+" "+vidaEquipoB); 
+
+					if (vidaEquipoA <=0){
+						vidaEquipoA=0;
+						break;}
+				    if (vidaEquipoB <=0){
+				    	vidaEquipoB=0;
+				    	break;}
+
+
 	}
-        	
-	
-	if (vidaEquipoA > vidaEquipoB){
-		 alert ("gano " + equipo1 + "\n" +  equipo1 + " " + vidaEquipoA + " " + equipo2 + " " + vidaEquipoB + ".");
+}
+alert ("Resultado Final:");
+	// 	}
+
+	// 	else{
+
+	// 		alert (equipo2 +"\n"+ "ataca primero");
+	// 		for (var tiempo = 0; tiempo < 20; tiempo++) {
+			
+
+	// 	}
+	// }
+    if (vidaEquipoA == 0){
+		 alert ("Gana " + equipo2 + "\n" +  equipo2 + " " + vidaEquipoB + " " + equipo1 + " " + vidaEquipoA + ".");
+		 
+	}else
+	if (vidaEquipoB == 0){
+		 alert ("Gana " + equipo1 + "\n" +  equipo1 + " " + vidaEquipoA + " " + equipo2 + " " + vidaEquipoB + "." );
+		 
+	}else		
+	if (tiempo == 2){
+		 alert ("Batalla empatada no hubo ganador en 60 turnos");
 		 
 	}else 
 		if (vidaEquipoB > vidaEquipoA){
-		 	alert ("gano " + equipo2 + "\n" +  equipo2 + " " + vidaEquipoB + " " + equipo1 + " " + vidaEquipoA + ".");
+		 	alert ("Gana " + equipo2 + "\n" +  equipo2 + " " + vidaEquipoB + " " + equipo1 + " " + vidaEquipoA + ".");
 		 	
-		 }else{
-			 alert ("batalla empatada a " + vidaEquipoA + " vida\n" +  equipo1 + " " + vidaEquipoA + " " + equipo2 + " " + vidaEquipoB + ".");
+		 }
+
+		 else 
+		if (vidaEquipoA > vidaEquipoB){
+		 	alert ("Gana " + equipo1 + "\n" +  equipo1 + " " + vidaEquipoA + " " + equipo2 + " " + vidaEquipoB + ".");
+		 	
+		 }
+
+
+
+		 else{
+			 alert ("Batalla empatada a " + vidaEquipoA + "\n" +  equipo1 + " " + vidaEquipoA + " " + equipo2 + " " + vidaEquipoB + ".");
 			 }
 			 
 			 clearBalls();
